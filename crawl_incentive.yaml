@@ -1,0 +1,66 @@
+project_name: "cninfo_equity_incentive_analysis"
+source: "cninfo"
+endpoint: "https://www.cninfo.com.cn/new/fulltextSearch/full"
+pdf_base_url: "https://static.cninfo.com.cn"
+keywords:
+  - "股票期权激励计划"
+  - "股权激励计划"
+required_title_keywords:
+  - "股票期权激励计划"
+  - "草案"
+target_industries:
+  - "半导体"
+  - "电子"
+  - "计算机"
+  - "医药"
+  - "高端制造"
+  - "集成电路"
+  - "芯片"
+  - "软件"
+  - "医疗器械"
+  - "生物制药"
+  - "智能制造"
+query:
+  column: "szse"
+  tab_name: "fulltext"
+  plate: ""
+  category: ""
+  page_size: 50
+  max_records: 200
+  title_exclude:
+    - "注销"
+    - "终止"
+    - "作废"
+    - "回购"
+    - "取消"
+    - "调整"
+    - "变更"
+    - "修订"
+    - "补充"
+    - "更正"
+    - "问询"
+    - "自查表"
+    - "摘要"
+    - "投资者关系活动"
+    - "法律意见书"
+    - "独立财务顾问报告"
+    - "核查意见"
+    - "财务顾问"
+    - "法律意见"
+    - "核查报告"
+    - "独立董事意见"
+    - "监事会意见"
+    - "律师事务所"
+    - "证券公司"
+    - "独立"
+    - "之"
+date_range:
+  start: "2021-01-01"
+  end: "2025-12-31"
+request:
+  sleep_seconds: 2
+  timeout_seconds: 30
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+output:
+  metadata: "data/metadata/metadata.csv"
+  pdf_dir: "data/pdf"
