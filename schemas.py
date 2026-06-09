@@ -30,7 +30,6 @@ class EquityIncentiveExtract(BaseModel):
     exercise_price: float = Field(
         description="行权价格（元/份）"
     )
-
     discount_rate: Optional[float] = Field(
     default=None,
     description="定价折扣率（%）"
