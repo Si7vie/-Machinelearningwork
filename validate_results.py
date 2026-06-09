@@ -46,12 +46,12 @@ def validate_results(config_path: str):
                 "stock_code": row["stock_code"],
 
                 "grant_amount": row["grant_amount"],
-                "grant_ratio": row["grant_ratio"],
+                "grant_ratio": row.get("grant_ratio"),
                 "participant_count": row["participant_count"],
                 "exercise_price": row["exercise_price"],
                 "discount_rate": row["discount_rate"],
-                "waiting_period": row["waiting_period"],
-                "validity_period": row["validity_period"],
+                "waiting_period": row.get("waiting_period"),
+                "validity_period": row.get("validity_period"),
             }
         )
 
